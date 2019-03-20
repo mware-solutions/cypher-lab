@@ -73,8 +73,8 @@ export class Visualization extends Component {
   }
   autoCompleteRelationships (existingNodes, newNodes) {
     if (this.props.autoComplete) {
-      const existingNodeIds = existingNodes.map(node => parseInt(node.id))
-      const newNodeIds = newNodes.map(node => parseInt(node.id))
+      const existingNodeIds = existingNodes.map(node => node.id)
+      const newNodeIds = newNodes.map(node => node.id)
 
       this.getInternalRelationships(existingNodeIds, newNodeIds)
         .then(graph => {
@@ -122,8 +122,8 @@ export class Visualization extends Component {
     })
   }
   getInternalRelationships (existingNodeIds, newNodeIds) {
-    newNodeIds = newNodeIds.map(bolt.neo4j.int)
-    existingNodeIds = existingNodeIds.map(bolt.neo4j.int)
+    newNodeIds = [...newNodeIds]
+    existingNodeIds = [...existingNodeIds]
     existingNodeIds = existingNodeIds.concat(newNodeIds)
     const query =
       'MATCH (a)-[r]->(b) WHERE id(a) IN $existingNodeIds AND id(b) IN $newNodeIds RETURN r;'
