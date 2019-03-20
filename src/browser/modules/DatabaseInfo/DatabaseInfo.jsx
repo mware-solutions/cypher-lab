@@ -86,10 +86,6 @@ export class DatabaseInfo extends Component {
             moreStep={this.state.moreStep}
           />
           <UserDetails user={user} onItemClick={onItemClick} />
-          <DatabaseKernelInfo
-            databaseKernelInfo={databaseKernelInfo}
-            onItemClick={onItemClick}
-          />
         </DrawerBody>
       </Drawer>
     )

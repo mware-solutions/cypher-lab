@@ -96,7 +96,6 @@ export default combineEpics(
   switchConnectionFailEpic,
   retainCredentialsSettingsEpic,
   connectEpic,
-  jmxEpic,
   disconnectEpic,
   silentDisconnectEpic,
   startupConnectEpic,

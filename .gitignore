@@ -18,3 +18,4 @@ release-notes.md
 /stats.json
 signature.pem
 HEAD
+*.iml

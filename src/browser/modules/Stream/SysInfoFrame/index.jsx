@@ -233,24 +233,7 @@ export class SysInfoFrame extends Component {
   }
   getSysInfo () {
     if (this.props.bus && this.props.isConnected) {
-      this.props.bus.self(
-        CYPHER_REQUEST,
-        {
-          query: 'CALL dbms.queryJmx("org.neo4j:*")',
-          queryType: NEO4J_BROWSER_USER_ACTION_QUERY
-        },
-        this.responseHandler.bind(this)
-      )
-      if (this.props.isACausalCluster) {
-        this.props.bus.self(
-          CYPHER_REQUEST,
-          {
-            query: 'CALL dbms.cluster.overview',
-            queryType: NEO4J_BROWSER_USER_ACTION_QUERY
-          },
-          this.clusterResponseHandler.bind(this)
-        )
-      }
+      // nothing to do for now
     } else {
       this.setState({ error: 'No connection available' })
     }

@@ -21,24 +21,7 @@
 export const scripts = [
   {
     folder: 'basics',
-    content:
-      '// Hello World!\nCREATE (database:Database {name:"Neo4j"})-[r:SAYS]->(message:Message {name:"Hello World!"}) RETURN database, message, r'
-  },
-  {
-    folder: 'basics',
     content: '// Get some data\nMATCH (n1)-[r]->(n2) RETURN r, n1, n2 LIMIT 25'
-  },
-  {
-    folder: 'basics',
-    not_executable: true,
-    content:
-      "// Create an index\n// Replace:\n//   'LabelName' with label to index\n//   'propertyKey' with property to be indexed\nCREATE INDEX ON :<LabelName>(<propertyKey>)"
-  },
-  {
-    folder: 'basics',
-    not_executable: true,
-    content:
-      "// Create unique property constraint\n// Replace:\n//   'LabelName' with node label\n//   'propertyKey' with property that should be unique\nCREATE CONSTRAINT ON (n:<LabelName>) ASSERT n.<propertyKey> IS UNIQUE"
   },
   {
     folder: 'profile',
@@ -55,19 +38,11 @@ export const scripts = [
   },
   {
     folder: 'profile',
-    content: '// What is related, and how\nCALL db.schema()'
-  },
-  {
-    folder: 'profile',
     content: '// List node labels\nCALL db.labels()'
   },
   {
     folder: 'profile',
     content: '// List relationship types\nCALL db.relationshipTypes()'
-  },
-  {
-    folder: 'profile',
-    content: '// Display constraints and indexes\n:schema'
   },
   {
     folder: 'graphs',
@@ -84,26 +59,6 @@ export const scripts = [
   {
     folder: 'procedures',
     content: '// List functions\nCALL dbms.functions()'
-  },
-  {
-    folder: 'procedures',
-    content: '// Show meta-graph\nCALL db.schema()'
-  },
-  {
-    folder: 'procedures',
-    content: '// List running queries\nCALL dbms.listQueries()'
-  },
-  {
-    folder: 'procedures',
-    not_executable: true,
-    content:
-      '// Wait for index to come online\n// E.g. db.awaitIndex(":Person(name)")\nCALL db.awaitIndex(<param>)'
-  },
-  {
-    folder: 'procedures',
-    not_executable: true,
-    content:
-      '// Schedule resampling of an index\n// E.g. db.resampleIndex(":Person(name)")\nCALL db.resampleIndex(<param>)'
   }
 ]
 

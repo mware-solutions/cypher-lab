@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
-  <groupId>org.neo4j.client</groupId>
-  <artifactId>neo4j-browser</artifactId>
+  <groupId>com.mware.bigconnect</groupId>
+  <artifactId>bc-cypher-lab</artifactId>
   <version>3.2.18</version>
-  <name>Neo4j - Browser</name>
-  <description>Graph database client.</description>
-  <url>https://github.com/neo4j/neo4j</url>
+  <name>BigConnect - Cypher Lab</name>
+  <description>Cypher client.</description>
+  <url>https://github.com/mware-solutions/bigconnect</url>
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <maven.compiler.source>1.8</maven.compiler.source>
@@ -17,20 +17,6 @@
     <attach-docs-phase>none</attach-docs-phase>
     <neo4j.java.version>1.8</neo4j.java.version>
   </properties>
-  <developers>
-    <developer>
-      <id>neo4j</id>
-      <name>The Neo4j Team</name>
-      <url>http://neo4j.org/</url>
-      <organization>Neo4j, Inc</organization>
-      <organizationUrl>http://www.neotechnology.com/</organizationUrl>
-    </developer>
-  </developers>
-  <scm>
-    <connection>scm:git:git://github.com/neo4j/neo4j.git</connection>
-    <developerConnection>scm:git:git@github.com:neo4j/neo4j.git</developerConnection>
-    <url>https://github.com/neo4j/neo4j</url>
-  </scm>
   <licenses>
     <license>
       <name>GNU General Public License, Version 3</name>
@@ -143,12 +129,13 @@
     </plugins>
   </build>
   <distributionManagement>
+    <snapshotRepository>
+      <id>bits.bigconnect.io</id>
+      <url>ftp://bits.bigconnect.io/maven2/snapshots</url>
+    </snapshotRepository>
     <repository>
-      <id>releases@repo.neo4j.org</id>
-      <uniqueVersion>true</uniqueVersion>
-      <name>Neo4j Releases</name>
-      <url>http://m2.neo4j.org/content/repositories/releases/</url>
-      <layout>default</layout>
+      <id>bits.bigconnect.io</id>
+      <url>ftp://bits.bigconnect.io/maven2/releases</url>
     </repository>
   </distributionManagement>
 </project>

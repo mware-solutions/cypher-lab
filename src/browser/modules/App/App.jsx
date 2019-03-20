@@ -145,7 +145,7 @@ export class App extends Component {
                       activeConnection={activeConnection}
                       connectionState={connectionState}
                       errorMessage={errorMessage}
-                      useBrowserSync={loadSync}
+                      useBrowserSync={false}
                     />
                   </StyledMainWrapper>
                 </StyledBody>
