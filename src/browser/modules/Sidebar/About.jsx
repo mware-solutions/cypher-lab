@@ -50,10 +50,10 @@ const About = ({ serverVersion, serverEdition }) => (
       <DrawerSection>
         <DrawerSubHeader>You are running</DrawerSubHeader>
         <DrawerSectionBody>
-          <p>Neo4j Browser version: {version}</p>
+          <p>BigConnect Cypher Lab version: {version}</p>
           <Render if={serverVersion && serverEdition}>
             <p>
-              Neo4j Server version:{' '}
+              BigConnect Server version:{' '}
               <a target='_blank' href={asChangeLogUrl(serverVersion)}>
                 {serverVersion}
               </a>{' '}

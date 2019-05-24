@@ -290,7 +290,7 @@ export const dbMetaEpic = (some$, store) =>
     .merge(some$.ofType(CONNECTION_SUCCESS))
     .mergeMap(() => {
       return (
-        Rx.Observable.timer(1, 20000)
+        Rx.Observable.timer(1, 1000000)
           .merge(some$.ofType(FORCE_FETCH))
           // Labels, types and propertyKeys
           .mergeMap(() =>

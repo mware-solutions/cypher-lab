@@ -61,7 +61,7 @@ export class ConnectionFrame extends Component {
             <StyledConnectionAside>
               <Render if={!this.state.success}>
                 <div>
-                  <H3>Connect to Neo4j</H3>
+                  <H3>Connect to BigConnect</H3>
                   <Lead>
                     Database access requires an authenticated connection.
                   </Lead>
