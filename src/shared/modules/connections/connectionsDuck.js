@@ -305,7 +305,7 @@ export const startupConnectEpic = (action$, store) => {
     if (!connection || !connection.host) {
       store.dispatch(setActiveConnection(null))
       store.dispatch(
-        discovery.updateDiscoveryConnection({ username: 'neo4j', password: '' })
+        discovery.updateDiscoveryConnection({ username: 'demo', password: '' })
       )
       return Promise.resolve({ type: STARTUP_CONNECTION_FAILED })
     }
@@ -336,7 +336,7 @@ export const startupConnectEpic = (action$, store) => {
             store.dispatch(setActiveConnection(null))
             store.dispatch(
               discovery.updateDiscoveryConnection({
-                username: 'neo4j',
+                username: 'demo',
                 password: ''
               })
             )
@@ -356,7 +356,7 @@ export const startupConnectEpic = (action$, store) => {
               store.dispatch(setActiveConnection(null))
               store.dispatch(
                 discovery.updateDiscoveryConnection({
-                  username: 'neo4j',
+                  username: 'demo',
                   password: ''
                 })
               )
@@ -525,7 +525,7 @@ export const switchConnectionEpic = (action$, store) => {
             store.dispatch(setActiveConnection(null))
             store.dispatch(
               discovery.updateDiscoveryConnection({
-                username: 'neo4j',
+                username: 'demo',
                 password: ''
               })
             )
