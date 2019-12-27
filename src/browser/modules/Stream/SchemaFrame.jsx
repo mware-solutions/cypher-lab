@@ -48,34 +48,8 @@ export class SchemaFrame extends Component {
       this.setState({ [name]: out })
     }
   }
-  componentDidMount () {
-    if (this.props.bus) {
-      // Indexes
-      this.props.bus.self(
-        CYPHER_REQUEST,
-        {
-          query: 'CALL db.indexes()',
-          queryType: NEO4J_BROWSER_USER_ACTION_QUERY
-        },
-        this.responseHandler('indexes')
-      )
-      // Constraints
-      this.props.bus.self(
-        CYPHER_REQUEST,
-        {
-          query: 'CALL db.constraints()',
-          queryType: NEO4J_BROWSER_USER_ACTION_QUERY
-        },
-        this.responseHandler('constraints')
-      )
-    }
-    if (this.props.indexes) {
-      this.responseHandler('indexes')(this.props.indexes)
-    }
-    if (this.props.constraints) {
-      this.responseHandler('constraints')(this.props.constraints)
-    }
-  }
+
+  componentDidMount () {}
 
   formatIndexAndConstraints (indexes, constraints) {
     let indexString

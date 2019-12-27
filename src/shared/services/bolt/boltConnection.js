@@ -47,7 +47,7 @@ const validateConnection = (driver, res, rej) => {
   if (!driver || !driver.session) return rej('No connection')
   const tmp = driver.session()
   tmp
-    .run('CALL db.indexes()')
+    .run('CALL db.labels()')
     .then(() => {
       tmp.close()
       res(driver)

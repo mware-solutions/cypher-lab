@@ -1,6 +1,6 @@
 {
-  "name": "Neo4j Browser",
-  "short_name": "Neo4j Browser",
+  "name": "BigConnect Cypher Lab",
+  "short_name": "BigConnect Cypher Lab",
   "start_url": ".",
   "display": "standalone",
   "background_color": "#fff",

@@ -56,7 +56,7 @@ export const ActionButtonSection = styled.div`
   padding-top: 21px;
   justify-content: space-between;
   padding-right: ${editorPadding}px;
-  background-color: ${props => props.theme.editorBarBackground};
+  background-color: '#EFEFF4';
 `
 
 const BaseEditorWrapper = styled.div`
