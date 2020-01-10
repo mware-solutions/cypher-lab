@@ -87,6 +87,12 @@ class Sidebar extends Component {
           <SettingsIcon isOpen={isOpen} title='Browser Settings' />
         ),
         content: SettingsDrawer
+      },
+      {
+        name: 'About',
+        title: 'About Cypher Lab',
+        icon: isOpen => <AboutIcon isOpen={isOpen} title='About Cypher Lab' />,
+        content: AboutDrawer
       }
     ]
 

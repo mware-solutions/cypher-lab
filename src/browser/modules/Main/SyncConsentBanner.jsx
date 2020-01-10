@@ -59,9 +59,9 @@ const SyncReminderBanner = React.memo(function SyncReminderBanner ({
     <Render if={visible}>
       <SyncDisconnectedBanner height='100px'>
         <StyledSyncReminderSpan>
-          To enjoy the full Neo4j Browser experience, we advise you to use
+          To enjoy the full Cypher Lab experience, we advise you to use
           <SyncSignInBarButton onClick={onGetstartedClicked}>
-            Neo4j Browser Sync
+            Cypher Lab Sync
           </SyncSignInBarButton>
         </StyledSyncReminderSpan>
         <StyledSyncReminderButtonContainer>

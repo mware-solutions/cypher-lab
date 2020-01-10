@@ -157,7 +157,7 @@ export class BrowserSync extends Component {
         </DrawerToppedHeader>
       )
     } else {
-      headerContent = <DrawerHeader>Neo4j Browser Sync</DrawerHeader>
+      headerContent = <DrawerHeader>Cypher Lab Sync</DrawerHeader>
     }
 
     if (this.state.clearLocalRequested === true) {
@@ -217,8 +217,8 @@ export class BrowserSync extends Component {
             <DrawerSubHeader>Sign In or Register</DrawerSubHeader>
             <DrawerSectionBody>
               <DrawerSection>
-                Neo4j Browser Sync is a companion service for Neo4j Browser.
-                Connect through a simple social sign-in to get started.
+                Cypher Lab Sync is a companion service for Cypher Lab. Connect
+                through a simple social sign-in to get started.
               </DrawerSection>
               <DrawerSection>
                 <ConsentCheckBox

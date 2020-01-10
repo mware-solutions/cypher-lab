@@ -88,8 +88,8 @@ class SyncReminderBanner extends Component {
       <Render if={visible}>
         <SyncDisconnectedBanner height='100px'>
           <StyledSyncReminderSpan>
-            You are currently not signed into Neo4j Browser Sync. Connect
-            through a simple social sign-in to get started.
+            You are currently not signed into Cypher Lab Sync. Connect through a
+            simple social sign-in to get started.
             <SyncSignInBarButton onClick={this.logIn.bind(this)}>
               Sign In
             </SyncSignInBarButton>

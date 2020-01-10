@@ -57,7 +57,7 @@ export default [
       },
       {
         name: 'intro',
-        description: ' - getting started with Neo4j Browser'
+        description: ' - getting started with BigConnect Cypher Lab'
       },
       {
         name: 'concepts',
@@ -79,18 +79,8 @@ export default [
   },
   {
     name: ':server',
-    description: ' - manage the connection to Neo4j',
-    commands: [
-      { name: 'status' },
-      { name: 'change-password' },
-      { name: 'connect' },
-      { name: 'disconnect' },
-      {
-        name: 'user',
-        description: ' - user management for administrators',
-        commands: [{ name: 'add' }, { name: 'list' }]
-      }
-    ]
+    description: ' - manage the connection to BigConnect',
+    commands: [{ name: 'status' }, { name: 'connect' }, { name: 'disconnect' }]
   },
   {
     name: ':param',
@@ -125,23 +115,23 @@ export default [
   },
   {
     name: ':get',
-    description: " - send HTTP GET to Neo4j's REST interface"
+    description: ' - send HTTP GET to BigConnect Explorer REST interface'
   },
   {
     name: ':post',
-    description: " - send HTTP POST to Neo4j's REST interface"
+    description: ' - send HTTP POST to BigConnect Explorer REST interface'
   },
   {
     name: ':put',
-    description: " - send HTTP PUT to Neo4j's REST interface"
+    description: ' - send HTTP PUT to BigConnect Explorer REST interface'
   },
   {
     name: ':delete',
-    description: " - send HTTP DELETE to Neo4j's REST interface"
+    description: ' - send HTTP DELETE to BigConnect Explorer REST interface'
   },
   {
     name: ':head',
-    description: " - send HTTP HEAD to Neo4j's REST interface"
+    description: ' - send HTTP HEAD to BigConnect Explorer REST interface'
   },
   {
     name: ':style'

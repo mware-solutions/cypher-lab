@@ -34,11 +34,15 @@ import { getVersion, getEdition } from 'shared/modules/dbMeta/dbMetaDuck'
 
 const About = ({ serverVersion, serverEdition }) => (
   <Drawer id='db-about'>
-    <DrawerHeader>About Neo4j</DrawerHeader>
+    <DrawerHeader>BigConnect Cypher Lab</DrawerHeader>
     <DrawerBody>
       <DrawerSection>
         <DrawerSubHeader>
           Made by{' '}
+          <a target='_blank' href='http://bigconnect.io/'>
+            BigConnect
+          </a>
+          {' & '}
           <a target='_blank' href='http://neo4j.com/'>
             Neo4j, Inc
           </a>
@@ -80,50 +84,14 @@ const About = ({ serverVersion, serverEdition }) => (
         </DrawerSectionBody>
       </DrawerSection>
       <DrawerSection>
-        <DrawerSubHeader>Participate</DrawerSubHeader>
-        <DrawerSectionBody>
-          Discuss on{' '}
-          <a target='_blank' href='https://community.neo4j.com/'>
-            Neo4j Community Forum
-          </a>{' '}
-          <br />
-          Ask questions at{' '}
-          <a
-            target='_blank'
-            href='http://stackoverflow.com/questions/tagged/neo4j'
-          >
-            Stack Overflow
-          </a>
-          <br />
-          Visit a local{' '}
-          <a target='_blank' href='http://neo4j.meetup.com/'>
-            Meetup Group
-          </a>
-          <br />
-          Contribute code to{' '}
-          <a target='_blank' href='http://github.com/neo4j'>
-            Neo4j
-          </a>{' '}
-          or{' '}
-          <a target='_blank' href='http://github.com/neo4j/neo4j-browser'>
-            Neo4j Browser
-          </a>
-          <br />
-          Send us your Browser feedback via{' '}
-          <a href='mailto:browser@neotechnology.com?subject=Neo4j Browser feedback'>
-            email
-          </a>
-        </DrawerSectionBody>
-      </DrawerSection>
-      <DrawerSection>
         <DrawerSubHeader>Thanks</DrawerSubHeader>
         <DrawerSectionBody>
-          Neo4j wouldn't be possible without a fantastic community. Thanks for
-          all the feedback, discussions and contributions.
+          The Cypher Lab wouldn't be possible without a fantastic community.
+          Thanks for all the feedback, discussions and contributions.
         </DrawerSectionBody>
       </DrawerSection>
     </DrawerBody>
-    <DrawerFooter>With &#9829; from Sweden.</DrawerFooter>
+    <DrawerFooter>With &#9829; from Sweden &amp; Romania</DrawerFooter>
   </Drawer>
 )
 
