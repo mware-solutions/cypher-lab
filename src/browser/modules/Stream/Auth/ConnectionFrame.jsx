@@ -69,7 +69,7 @@ export class ConnectionFrame extends Component {
               </Render>
               <Render if={this.state.success}>
                 <div>
-                  <H3>Connected to Neo4j</H3>
+                  <H3>Connected</H3>
                   <Lead>Nice to meet you.</Lead>
                 </div>
               </Render>
