@@ -312,10 +312,9 @@ export const startupConnectEpic = (action$, store) => {
     return new Promise((resolve, reject) => {
       bolt
         .openConnection(
-          // Try without creds
+          // Try with token
           connection,
           {
-            withoutCredentials: true,
             encrypted: getEncryptionMode(connection)
           },
           onLostConnection(store.dispatch)
@@ -323,11 +322,13 @@ export const startupConnectEpic = (action$, store) => {
         .then(r => {
           store.dispatch(
             discovery.updateDiscoveryConnection({
-              username: undefined,
-              password: undefined
+              username: connection.username,
+              password: connection.password,
+              token: connection.token
             })
           )
           store.dispatch(setActiveConnection(discovery.CONNECTION_ID))
+          store.dispatch(setAuthEnabled(true))
           resolve({ type: STARTUP_CONNECTION_SUCCESS })
         })
         .catch(() => {

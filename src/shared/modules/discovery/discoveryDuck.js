@@ -72,13 +72,14 @@ export const getBoltHost = state => {
 
 const updateDiscoveryState = (action, store) => {
   const updateObj = { host: action.forceURL }
-  if (action.username && action.password) {
-    updateObj.username = action.username
-    updateObj.password = action.password
-  }
-  if (typeof action.encrypted !== 'undefined') {
-    updateObj.encrypted = action.encrypted
-  }
+  if (action.username) updateObj.username = action.username
+
+  if (action.password) updateObj.password = action.password
+
+  if (action.token) updateObj.token = action.token
+
+  if (typeof action.encrypted !== 'undefined') { updateObj.encrypted = action.encrypted }
+
   updateObj.restApi = action.restApi
 
   const updateAction = updateDiscoveryConnection(updateObj)
@@ -101,6 +102,8 @@ export const discoveryOnStartupEpic = (some$, store) => {
       const passedURL = getUrlParamValue('connectURL', action.url)
       if (!passedURL || !passedURL.length) return action
       action.forceURL = decodeURIComponent(passedURL[0])
+      const token = getUrlParamValue('token', action.url)
+      if (token) action.token = token[0]
       return action
     })
     .merge(some$.ofType(USER_CLEAR))

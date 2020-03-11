@@ -51,6 +51,7 @@ function openConnection (props, opts = {}, onLostConnection) {
           authenticationMethod: props.authenticationMethod || NATIVE,
           username: props.username,
           password: props.password,
+          token: props.token,
           host: props.host,
           opts
         }

@@ -74,10 +74,7 @@ const buildAuthObj = (props, opts) => {
   if (props.authenticationMethod === KERBEROS) {
     auth = neo4j.auth.kerberos(props.password)
   } else {
-    auth =
-      opts.withoutCredentials || !props.username
-        ? neo4j.auth.basic('', '')
-        : neo4j.auth.basic(props.username, props.password)
+    if (props.username && props.password) { return neo4j.auth.custom(props.username, props.password, '', 'password') } else if (props.token) { return neo4j.auth.custom(props.username, props.token, '', 'token') }
   }
   return auth
 }

@@ -32,7 +32,7 @@ export const getEncryptionMode = options => {
 }
 
 export const getDiscoveryEndpoint = () => {
-  const url = location.host ? location.href : 'http://localhost:7474/'
+  const url = location.host ? location.href : 'http://localhost:10242/'
   const info = getUrlInfo(url)
   return `${info.protocol}//${info.host}/`
 }
