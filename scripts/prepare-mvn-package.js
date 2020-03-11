@@ -34,16 +34,16 @@ function mkPath (dirPath) {
 }
 
 mkPath(path.join(__dirname, '../mvn'))
-ncp(path.join(__dirname, '../dist'), path.join(__dirname, '../mvn/browser'))
+ncp(path.join(__dirname, '../dist'), path.join(__dirname, '../mvn/cypherlab'))
 ncp(
   path.join(__dirname, '../LICENSE'),
-  path.join(__dirname, '../mvn/browser/LICENSE')
+  path.join(__dirname, '../mvn/cypherlab/LICENSE')
 )
 ncp(
   path.join(__dirname, '../LICENSES.txt'),
-  path.join(__dirname, '../mvn/browser/LICENSES.txt')
+  path.join(__dirname, '../mvn/cypherlab/LICENSES.txt')
 )
 ncp(
   path.join(__dirname, '../NOTICE.txt'),
-  path.join(__dirname, '../mvn/browser/NOTICE.txt')
+  path.join(__dirname, '../mvn/cypherlab/NOTICE.txt')
 )

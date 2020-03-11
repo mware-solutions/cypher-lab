@@ -26,7 +26,7 @@
     "e2e-local": "CYPRESS_E2E_TEST_ENV=\"local\" cypress run",
     "e2e-local-open": "CYPRESS_E2E_TEST_ENV=\"local\" cypress open",
     "format": "prettier-eslint 'src/**/!(*.min).js' 'src/**/*.jsx' --write",
-    "jar": "yarn build && mvn package",
+    "jar": "yarn build && yarn prepare-jar && mvn package",
     "jest": "jest --coverage",
     "lint": "eslint --fix --ext .js --ext .jsx ./",
     "precommit": "lint-staged",
