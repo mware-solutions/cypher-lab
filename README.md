@@ -21,3 +21,10 @@ Download these two chrome extensions:
 
 - [Redux devtools](https://chrome.google.com/webstore/detail/redux-devtools/lmhkpmbekcpmknklioeibfkpmmfibljd?hl=en)
 - [React devtools](https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi?hl=en)
+
+
+## Production build
+yarn build
+yarn prepare-jar
+mvn clean install
+
